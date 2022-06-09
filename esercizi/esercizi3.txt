@@ -1,0 +1,61 @@
+
+ESERCIZIO [18/9/2020]
+Si consideri un sistema per la gestione delle opere d’arte esposte presso un Museo. Un Museo `e caratterizzato da un nome e dalla lista di opere d’arte che ospita. Una opera d’arte `e caratterizzata da un codice univoco, un nome, un autore, l’anno in cui `e stata realizzata e il numero della stanza in cui `e esposta. Per semplicit`a si assuma che il Museo oggetto di questo esame ha tre stanze e ciascuna stanza pu`o accogliere un numero variabile di opere.
+Implementare la classe Museo, che prevede i seguenti metodi:
+• aggiungi opera, il quale aggiunge una opera d’arte alla lista di quel Museo. Il metodo deve controllare che l’opera non sia gi`a presente.
+Si consideri il caso di un Museo a pagamento. Ciascuna stanza del Museo potr`a essere visitata pagando un biglietto. Il prezzo del biglietto dipende dalle opere che vi sono esposte.
+• Modificare il metodo aggiungi opera in modo tale da aggiornare il prezzo del biglietto per la stanza in cui `e esposta quella opera.
+• Implementare il metodo stampa prezzo stanze, che visualizza il prezzo del biglietto per ciascuna stanza nel museo.
+
+ESERCIZIO [21/7/2020]
+Ogni studente della laurea triennale ha un piano di studi, rappresentato da un insieme fisso di corsi (ogni studente deve fare gli stessi esami). I corsi universitari sono caratterizzati da un codice identificativo (un intero), i crediti formativi (CFU, anche essi interi), e il voto che lo studente ha preso (rappresentato da un intero maggiore o uguale a 18, che viene posto a 0 se lo studente non ha ancora sostenuto l’esame o non l’ha superato).
+Definire le strutture dati necessarie e la classe PianoStudiTriennale con un costruttore e i seguenti metodi:
+1. un metodo esame sostenuto, il quale prende in input il codice del corso e il voto che lo studente ha ottenuto e cambia la votazione finale;
+2. un metodo calcola media ponderata, che calcola la media ponderata degli esami sostenuti ed eliminando dal conteggio il voto peggiore.
+3. un metodo idoneo laurea che controlla se lo studente pu`o laurearsi (verificando che abbia sostenuto tutti gli esami).
+Definire poi una sottoclasse PianoStudiMaster che aggiunge anche il tirocinio al piano di studi dello studente. Il valore del tirocinio `e true se il tirocinio `e gi`a stato svolto, false altrimenti. Definire il costruttore e i seguenti metodi:
+1. il metodo calcola media ponderata (sovrascritto) che calcola la media ponderata degli esami sostenuti senza eliminare il voto peggiore.
+2. il metodo idoneo laurea (sovrascritto) che considera anche il tirocinio.
+
+ESERCIZIO [15/6/2020]
+Un punto di ritiro spedizioni pu`o ricevere un qualunque numero di pacchi. Ogni pacco `e contraddistinto da un numero di ordine e una dimensione (entrambi sono rappresen- tatati da un intero, la dimensione indica il volume).
+(a) Definire la classe PuntoRitiro con i campi opportuni e con i metodi aggiungi che aggiunge un pacco al punto di ritiro (controllando che non ci siano due pacchi con lo stesso numero d’ordine) e rimuovi che rimuove un pacco in base al numero d’ordine.
+(b) Definire la sottoclasse Locker che `e un punto di ritiro con un numero fissato di box. Ogni box pu`o contenere un solo pacco e i box di un Locker possono contenere pacchi fino a una certa dimensione massima.
+i. Definire il costruttore Locker che determina il numero dei box e le dimensione massima dei pacchi che possono contenere.
+ii. Riscrivere i metodi aggiungi e rimuovi. Il metodo aggiungi stampa errore se il Locker `e pieno oppure quando la dimensione del pacco `e troppo grande.
+
+ESERCIZIO [19/2/2020]
+Un multinsieme `e una collezione di oggetti con la loro molteplicit`a. Un semplice multinsieme `e la borsa. Nella borsa ci sono 10 mele, 3 pere, 1 kiwi. Quindi `e il multinsieme:
+borsa = {10 · mela, 3 · pera, 1 · kiwi}
+Su un multinsieme `e possibile eseguire le operazioni di add, che aggiunge un elemento al
+multinsieme, e remove, che elimina un elemento dal multinsieme. Ad esempio: addmelaborsa = {11·mela,3·pera,1·kiwi}
+removekiwiborsa = {10·mela,3·pera}
+(a) Definire la classe multinsieme il cui tipo degli elementi che contiene `e int (ad esempio {11 · 0, 328 · −1234} contiene 11 volte 0 e contiene 328 volte −1234) con i metodi add e remove (Il metodo remove, quando l’elemento non c’`e, non rimuove nulla).
+(b) Definire la sotto-classe multinsiemeplus con l’ulteriore metodo addplus che prende in input un elemento e la sua molteplicit`a e aggiorna il proprio multinsieme aggiungendo quell’elemento con la relativa molteplicit`a. Il metodo addplus deve utilizzare il metodo add della superclasse.
+
+ESERCIZIO [19/12/2020]
+Un impianto sciistico di risalita `e caratterizzato da un nome e da un costo di utilizzo (espresso in punti). Definire mediante array il tipo di dato “comprensorio sciistico” che `e un insieme finito di impianti di risalita.
+In seguito, definire la classe skipass con i campi opportuni in modo da ammettere due tipi di skipass:
+(a) quello “Giornaliero”, che pu`o essere utilizzato nell’arco di una sola giornata e non ha limite sul numero di ingressi;
+(b) quello “Ricaricabile”, che all’acquisto ha un determinato numero di punti, che verranno scalati ad ogni accesso agli impianti e che dipende dal singolo impianto.
+La classe skipass ha i seguenti metodi:
+(a) un metodo “accesso” che prende in input il nome di un impianto e una data e consente di accedere all’impianto (decrementando i punti o controllando che lo skipass `e valido); [una data `e un intero di 8 cifre, le prime 4 sono l’anno, le altre 2 sono i mesi, le ultime due indicano il giorno]
+(b) un metodo “ricarica” che prende in input un intero (che indica i punti oppure un giorno) e un booleano (“vero” significa che si vuole ricaricare con un altro giorno, “falso” significa che si vogliono ricaricare punti).
+
+ESERCIZIO [19/9/2019]
+Definire la classe miocorsodistudi che contiene il numero di matricola (un intero), una tabella in cui ogni indice corrisponde ad un corso e il cui valore e‘ il numero di cfu.
+Definire un opportuno costruttore e metodi con le seguenti interfacce:
+• void aggiungerecorso(int cfu) per aggiungere un corso alla tabella (assumere che il corso non sia gi`a presente);
+• int numerodiore() che ritorna il numero di ore di studio corrispondenti al proprio corso di studio, assumendo che 1 cfu corrisponde a 25 ore di studio.
+Quindi definire la sottoclasse miocorsodistudi plus che ha una tabella aggiuntiva con i corsi di esercitazione.
+Definire un opportuno costruttore e metodo con la seguente interfaccia:
+• int numerodiore() che ritorna il numero di ore di studio corrispondenti al proprio corso di studio, che includono anche i corsi di esercitazione, assumendo che 1 cfu di esercitazione corrisponde a 12 ore di studio.
+
+ESERCIZIO [4/7/2019]
+Definire una classe Stabilimento con un campo che contiene il numero di ombrelloni, un altro il numero di sdraio, un altro la lista di ospiti. Ogni ospite ha un nome (una stringa di 10 caratteri), un campo numero ombrelloni affittato e un campo numero sdraio affittato. Definire
+1. il costruttore che inizializza ombrelloni e sdraio di uno stabilimento;
+2. un metodo insert che inserisce un nuovo ospite (se possibile);
+3. un metodo remove che prende il nome dell’ospite e lo rimuove dalla lista (la sua vacanza `e finita).
+4. Definire una sottoclasse Stabilimento Plus che ha due ulteriori campi con il costo degli ombrelloni e quello delle sdraio. Definire
+(a) il costruttore;
+(b) un metodo che ritorna il guadagno che si ha dagli ospiti attualmente presenti nello stabilimento.
