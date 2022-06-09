@@ -1,0 +1,33 @@
+
+Esercizio [21/9/18]
+Definire in C++ le strutture dati necessarie per gestire una lista ORDINATA di smartphone. La lista memorizza per ogni smartphone: modello, prezzo, produttore. Per semplicita` si assume che modello e produttore siano di tipo string e prezzo sia di tipo integer.
+La lista `e ordinata per produttore (in ordine alfabetico) e, per ogni produttore, in ordine decrescente di prezzo. Saranno quindi memorizzati, ad esempio, prima tutti gli smartphone Apple e poi tutti i Samsung. Gli smartphone Apple poi saranno ordinati dal piu` caro al piu` economico.
+Definire opportunamente i tipi di dato, `e ammesso l’uso della classe string. Definire:
+(1) una funzione che prende in input una lista e un prezzo e ritorna il numero di produttori che vendono almeno un modello il cui prezzo `e minore del valore passato in input.
+(2) una funzione che aggiunge uno smartphone nella posizione corretta. La funzione prende in input la lista e i dati relativi al nuovo smartphone.
+
+Esercizio [5/6/2019] 
+Scrivere una funzione che prende in input una lista di caratteri e restituisce il numero di occorrenze della stringa “amar” nella lista di input.
+
+Esercizio [19/9/2019]
+Implementare in C++ il tipo di dato insieme-di-naturali (non si possono utilizzare array). Quindi implementare le operazioni di unione e intersezione.
+
+Esercizio [3/7/2020] 
+Definire le strutture dati necessarie per rappresentare una lista dei libri contenuti in una libreria. Ogni libro ha un titolo, un prezzo e il numero di copie presenti nel negozio. Definire le seguenti funzioni:
+• Una funzione che prende in input il titolo di un libro che un cliente vuole comprare e ne decrementa la quantit`a (se presente). Il libro viene rimosso dalla lista se il cliente compra l’ultima copia;
+• Una funzione che calcola la media dei prezzi dei libri;
+• Una funzione che restituisce il titolo del libro piu` costoso tra quelli presenti nella libreria.
+
+
+ESERCIZIO [21/7/2020]
+ Definire le strutture dati necessarie per rappresentare una playlist di un servizio digitale di streaming. Una playlist `e una lista di canzoni e ogni canzone ha un titolo, una durata (in secondi), il numero totale di riproduzioni fatte e il numero di ascoltatori che l’hanno riprodotta. Definire le seguenti funzioni:
+• Una funzione che prende in input la playlist e crea una nuova playlist con solamente le canzoni che durano piu` di 3 minuti;
+• Una funzione che ritorna la durata totale della playlist in minuti;
+• Una funzione che restituisce il titolo della canzone con il piu` alto tasso di riproduzioni ripetute
+(ovvero in cui `e massimo il rapporto tra numero di riproduzioni e il numero di ascoltatori).
+
+Esercizio [18/9/2020]
+Definire le strutture dati necessarie per rappresentare una lista della spesa. Ogni elemento della lista è composto dal nome del prodotto, la quantità da acquistare e dal prezzo unitario, inizialmente impostato a zero. Definire le seguenti funzioni:
+1. Una funzione che aggiunge un nuovo articolo da acquistare nella lista, inserendolo in ordine alfabetico (dovrà prendere in input il nome dell'articolo e la quantità necessaria);
+2. Una funzione che prende in input il nome dell'articolo acquistato e il suo prezzo unitario, aggiornandone il prezzo presente nella lista; 
+3. Una funzione che restituisce la spesa totale degli articoli acquistati. 
