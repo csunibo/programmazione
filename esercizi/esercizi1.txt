@@ -1,0 +1,22 @@
+
+ESERCIZIO 21/7/2020: Scrivere una funzione che prende in input un 
+array di interi e ritorna la distanza massima tra due interi memorizzati 
+nell’array (la distanza tra due interi `e la loro differenza in valore assoluto).
+
+ESERCIZIO 3/7/2020: Scrivere una funzione che prende in input un array A di interi e ritorna l’indice di inizio della sequenza di interi non zero piu` lunga. Ad esempio, con input
+                            1,0,0,5,1,3,0,24,12,75,28,0,0,3
+ritorna 7.
+
+ESERCIZIO 15/6/2020: Scrivere una funzione che prende in input un array A di interi (l’array non e` ordinato) e ritorna il valore in A che ha piu` copie memorizzate in A.
+
+ESERCIZIO 19/2/2020 Scrivere una funzione che prende un array di interi e lo trasforma come segue: la prima parte dell’array finale contiene tutti i numeri maggiori di 1000; 
+la seconda parte contiene tutti i numeri negativi; la terza parte contiene tutti i numeri compresi tra 0 e 1000. Non si richiede che le tre parti siano ordinate.
+
+ESERCIZIO 19/12/2019 Scrivere una funzione “tre copie” che prende un array di interi e ritorna “vero” se l’array contiene un elemento con almeno tre copie di esso, “falso” altrimenti.
+
+ESERCIZIO 19/9/2019: Scrivere una funzione che prende un array di interi e 
+restituisce il numero massimo di duplicati. Ad esempio, se l’array in input `e 
+7 8 9 1 7 0 8 
+restituisce 2.
+
+ESERCIZIO 4/7/2019: Scrivere una funzione che prende un array di interi e restituisce la norma, cioe` la somma degli interi positivi meno la somma degli interi negativi (presi in valore assoluto).
