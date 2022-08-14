@@ -1,14 +1,14 @@
-# Programmazione 
+# Programmazione (00819)
 
-Una raccolta di risorse per l'insegnamento di programmazione (00819) del Corso di
-Laurea in Informatica.
+Una raccolta di risorse per l'insegnamento di Programmazione (00819) del Corso
+di Laurea in Informatica.
 
 ## Presentazione
 
-[Questo sito](https://csunibo.github.io/programmazione) elenca staticamente
-i contenuti della raccolta. Qui, documenti e presentazioni con estensione
-`.md`, `.tex`, `.doc`, `.docx`, `.ppt` o `.pptx` sono automaticamente
-convertiti in formato PDF.
+[Questo sito](https://csunibo.github.io/programmazione) elenca staticamente i
+contenuti della raccolta. Qui, documenti e presentazioni con estensione `.md`,
+`.tex`, `.doc`, `.docx`, `.ppt` o `.pptx` sono automaticamente convertiti in
+formato PDF.
 
 ## Contribuire
 
