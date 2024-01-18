@@ -8,6 +8,14 @@ using namespace std;
 
 
 // es. 1
+
+/*
+ * Suddivisione del punteggio:
+ * Definire correttamente la struttura (1.a) -> 0.5
+ * (1.b) -> 3.5, inoltre se si usa un for-loop l'esercizio è sbagliato, quindi 0 punti
+ * (1.c) -> 4, qui il for-loop potrebbe andare bene, ma il prof avrebbe assegnato 0.5 punti in meno
+ */
+
 // 1.a
 struct nodo {
     int val;
@@ -69,6 +77,7 @@ esame* rifiuta_esame(esame* head, int cfu) {
 }
 
 // 2.b
+// è stato detto che non veniva valutato se fosse stato considerato il caso di un passaggio di una lista vuota
 // PRECONDIZIONE: lunghezza di dest[] = MAX;
 void min_esame(esame* head, char dest[]) {
     esame* min = NULL, * now = head;
@@ -87,6 +96,7 @@ void min_esame(esame* head, char dest[]) {
 }
 
 // 2.c
+// Qui molto importante l'if finale per evitare di dividere per 0
 float media(esame* head) {
     int cfut = 0, tot = 0;
     esame* now = head;
@@ -121,6 +131,7 @@ public:
     Albergo(camera camere[]) {
         // Visto che la traccia parla di semplificazione, in cui un albergo ha N stanze, non ho fatto i controlli e ho
         // dato per scontato che l'array che viene passato (camere[]) inizializzi tutte le stanze e sia di lunghezza N.
+        // Durante la correzione è stato detto che andava bene anche senza il controllo
         for ( int i = 0; i < N; i++ ) {
             c[i].id = camere[i].id;
             c[i].letti = camere[i].letti;
@@ -128,7 +139,16 @@ public:
         }
     }
 
-    int prenota(int n_letti) { // return -1 se non è stata trovata
+    /*
+     * Per questa funzione la situazione è ambigua, infatti la traccia parla di restituire 2 valori cosa impossibile per una funzione
+     * esistono però due escamotage:
+     * - il primo è il passaggio per riferimento di un booleano, che ci permette di restituire il numero della camera e di scrivere se
+     *   l'operazione è andata a buon fine (soluzione considerata corretta dal docente)
+     * - il secondo è la creazione di una struttura che contenga un int per il numero della stanza e un bool, soluzione
+     *   considerata sbagliata dal docente ma comunque corretta secondo la traccia
+     */
+    //
+    int prenota(int n_letti, bool* buon_fine) { // return -1 se non è stata trovata
         bool found = false;
         int id_stanza;
         for ( int i = 0; i < N && !found; i++ ) {
@@ -138,10 +158,14 @@ public:
                 found = true;
             }
         }
-        if ( found )
+        if ( found ) {
+            *buon_fine = true;
             return id_stanza;
-        else
-            return -1;
+        }
+        else {
+            *buon_fine = false;
+            return 0;
+        }
     }
 };
 
@@ -165,9 +189,10 @@ public:
         }
     }
 
-    int prenota(int n_letti) { // return -1 se non è stata trovata una stanza libera
-       int id_stanza = Albergo::prenota(n_letti);
-       if ( id_stanza != -1 ) {
+    int prenota(int n_letti, bool* buon_fine) { // return -1 se non è stata trovata una stanza libera
+       int id_stanza = Albergo::prenota(n_letti, buon_fine);
+       // Possibile errore grave qui se non si controlla se l'operazione della funzione prenota è andata a buon fine
+       if ( *buon_fine ) {
            bool found = false;
            for ( int i = 0; i < M && !found; i++ ) {
                if ( o[i].disp ) {
